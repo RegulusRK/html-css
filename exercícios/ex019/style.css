@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Palanquin+Dark&display=swap');
+
+/*
+    Em HTML é id e em CSS é #
+    EM HTML é class e em CSS é .
+*/
+
+body {
+    background-image: linear-gradient( #FFFFFF, #FFB30D);
+
+}
+
+h1 {
+    color: #001542 ;
+    text-decoration: underline;
+    font-family: 'Bebas Neue', sans-serif;
+    text-indent: 15px;
+}
+
+h2 {
+    color: #085454;
+    text-decoration: underline;
+    font-family: 'Palanquin Dark', sans-serif;
+
+}
+
+.top {
+    text-decoration: none;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    
+}
+
+p {
+    text-align: justify;
+    font-weight: bold;
+    text-indent: 15px;
+}

@@ -1,0 +1,169 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Android';
+    src: url(fontes/idroid.otf);
+}
+
+body {
+    background-color: #84E1AD;
+    margin: 0px;
+}
+h1 {
+    font-family: fantasy;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.752);
+    text-align: center;
+    font-weight: lighter;
+    padding-top: 40px;
+    margin: 0px;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.752);
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+ header {
+    
+    background-image: linear-gradient(to bottom, #3BD27F,#175031 );
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.663);
+    height: max-content;
+    
+ }
+
+ article {
+    width: 820px;
+    padding: 10px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.258);
+ }
+
+ .conteudo {
+    text-align: justify;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: none;
+    text-indent: 30px;
+ }
+ 
+ .titulodroid {
+    text-align: justify;
+    color: #236240;
+    text-shadow: none;
+    font-family: 'Android';
+    background-image: repeating-linear-gradient(to right, #67a08175, white);
+    font-size: 23px;
+    text-indent: 10px;
+ }
+
+ #tituloprincipal {
+    text-align: justify;
+    color: #236240;
+    text-shadow: none;
+    font-family: 'Android';
+    font-size: 35px;
+ }
+
+#rodape {
+    background-color: #175031;
+    color: rgb(255, 255, 255);
+    text-shadow: none;
+    padding: 10px;
+    
+ }
+
+ #rodape > p {
+    margin: 0px;
+ }
+
+ #menu > a {
+    margin-right: 10px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding-left: 20px;
+ }
+
+ #menu > a:hover {
+    text-decoration: underline;
+ }
+
+ picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .link1 {
+    color: #175031;
+    text-decoration: none;
+    font-weight: bolder;
+
+ }
+
+ .link1:hover {
+    color: #103822;
+ }
+
+ #irina {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+ }
+
+ .video {
+    margin: 0px;
+    padding: 50px;
+    background-color: #103822;
+ }
+
+ .titulotabela {
+    color: white;
+    background-color: #2FA866;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-shadow: none;
+    margin-top: 50px;
+    padding: 10px; 
+    text-indent: 0px;
+    margin-left: 0px;
+ }
+
+ .box {
+    background-color: #C5EBD6;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: none;
+    text-align: justify;
+    text-indent: 30px;
+    padding: 0px 5px 0px 5px;
+     
+ }
+
+ nav {
+    text-align: center;
+    
+ }
+
+ .solo {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: none;
+    text-align: justify;
+    text-indent: 30px;
+ }
+
+ .itens2 {
+   float: right;
+   margin-right: 370px;
+ }
+
+ .itens {
+   float: left;
+  text-align: left;
+ }

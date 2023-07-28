@@ -1,0 +1,38 @@
+@charset "UTF_8";
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Kanit&display=swap');
+
+
+body {
+    background-image: linear-gradient(to right,#0367A6, #023059, #023059);
+    display: flex
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+}
+
+.conteudo-secundario {
+    flex-direction: column;
+}
+
+.titulo-principal {
+    display: flex;
+    color: #91BBF2;
+    font-family: 'Fjalla One', sans-serif;
+    text-shadow: 2px 2px 5px #324052d8;
+    justify-content: space-around;
+    font-size: 48px;
+    
+}
+
+.titulo2 {
+    display: flex;
+    border-top: 0.4px solid white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 40px;
+    justify-content:left;
+   
+}
