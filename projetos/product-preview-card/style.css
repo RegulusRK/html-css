@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Montserrat' ;
+    src: url(fontes/Montserrat-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Frauces' ;
+    src: url(fontes/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf) format('truetype');
+}
+
+
+:root {
+
+    --cor0: hsl(30, 38%, 92%);
+    --cor1: hsl(158, 36%, 37%);
+    --cor2: hsl(212, 21%, 14%);
+    --cor3: hsl(228, 12%, 48%);
+    --cor4: hsl(0, 0%, 100%);
+    --cor5: hsl(158, 35%, 28%);
+
+    --font-primaria: 'Montserrat', 'sans-serif';
+    --font-secundaria:: 'Fraunces', 'serif';
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+    width: 1440px;
+}
+  
+
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+.imagem {
+    position: relative;
+    max-width: 300px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 340px;
+    margin-top: 0px;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.312);
+}
+
+
+
+.caixa-principal {
+    position: absolute;
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    margin-top: 100px; 
+    width: 1000px;
+
+}
+
+.caixa {
+    background-color: var(--cor4);
+    background-color: #f0f0f0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.312);
+    border-radius: 0px 10px 10px 0px;
+    width: 290px;
+    height: 450px;
+    margin-right: 0px;
+    padding-inline: 10px;
+}
+
+.categoria {
+    font-family: var(--font-primaria);
+    font-weight: 500;
+    font-size: 11px;
+    margin: 30px 0px 20px 35px;
+    letter-spacing: 2px;
+    color:var(--cor3);
+}
+
+.nome {
+    font-family: var(--font-secundaria);
+    margin: 0px 0px 20px 35px;
+    font-size: 37px;
+    line-height: 35px;
+    max-width: 230px;
+}
+
+.descrição {
+    font-family: var(--font-primaria);
+    margin: 0px 0px 20px 35px;
+    font-size: 14px;
+    color:var(--cor3);
+    line-height: 25px;
+    text-align: left ;
+}
+
+.valores {
+    display: flex ;
+    align-items: center;
+}
+
+.valor {
+    font-family: var(--font-primaria);
+    font-weight: 700;
+    margin: 0px 0px 20px 35px;
+    font-size: 40px;
+    color: var(--cor1);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.177);
+}
+
+.valor2 {
+    position: relative;
+    color: var(--cor3);
+    text-decoration: line-through ;
+    padding: 20px;
+    margin-bottom: 20px;
+   
+}
+
+.botão_ {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 50px; 
+}
+
+.botão {
+    position: relative;
+    padding: 10px 10px 10px 20px;
+    font-family: var(--font-primaria);
+    font-weight: 700px;
+    background-color: var(--cor1);
+    border: none;
+    font-weight: 700;
+    color: var(--cor4);
+    width: 240px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.297);
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+    transition-delay: 0.1s;
+}
+
+.botão:hover {
+    color: var(--cor5) ;
+    background-color: var(--cor0);
+  
+}
+
+.carrinho {
+    position: absolute;
+    display: flex;
+    margin-right: 100px;
+    transition: fill 0.3s;
+    fill: white;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.botão:hover .carrinho {
+    fill: goldenrod;
+}
