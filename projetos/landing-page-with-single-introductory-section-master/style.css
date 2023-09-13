@@ -35,6 +35,8 @@ body {
     background-image: url(images/bg-desktop.svg);
     background-size: 79%;
     background-repeat: no-repeat;
+    background-position: cover;
+    background-attachment: fixed;
 }
 
 #Logo {
