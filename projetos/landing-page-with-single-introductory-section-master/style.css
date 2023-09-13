@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'OpenSans' ;
+    src: url(fontes/OpenSans-VariableFont_wdth\,wght.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url(fontes/Poppins-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url(fontes/Poppins-SemiBold.ttf) format('truetype');
+}
+
+:root {
+    --cor0_Violet: hsl(257, 40%, 49%);
+    --cor1_SoftMagenta: hsl(300, 69%, 71%); 
+
+    --fonte_primaria: 'Poppins-Regular', 'sans-serif';
+    --fonte_primariaSemiBold: 'Poppins-SemiBold', 'sans-serif';
+    --fonte_secundaria: 'OpenSans', 'sans-serif';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    max-width: 1440px;
+    background-color: var(--cor0_Violet);
+    background-image: url(images/bg-desktop.svg);
+    background-size: 79%;
+    background-repeat: no-repeat;
+}
+
+#Logo {
+    width: 150px;
+    margin: 30px;
+    margin-left: 50px;
+}
+
+main {
+    display: flex;
+}
+
+#example {
+    position: relative;
+    display: inline-block;
+    height: 40%;
+    width: 40%;
+    max-width: 100%;
+    margin: 20px 20px 20px 50px ;
+    transition:transform 0.3s ;
+}
+
+#example:hover {
+    transform: scale(102%);
+    transition-delay: 0.2s;
+}
+
+
+#conteudo {
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+h1 {
+    color: white;
+    font-family: var(--fonte_primariaSemiBold);
+    font-size: 30px;
+    padding: 10px;
+    width: 50%;
+}
+
+p {
+    color: white;
+   font-family: var(--fonte_secundaria);
+   padding: 10px;
+   width: 60%;
+   line-height: 25px;
+   font-size: 14px;
+}
+
+button {
+    cursor: pointer; 
+    padding: 10px 50px 10px 50px;
+    margin-left: 10px;
+    border: none;
+    font-family: var(--fonte_secundaria);
+    border-radius: 50px;
+    color: var(--cor0_Violet);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.573);
+    transition: transform 0.2s ease
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(207, 207, 207);
+    color: var(--cor1_SoftMagenta);
+    transform: scale(102%);
+}
+
+.ionicon1 {
+    position: absolute;
+    width: 25px;
+    fill: white;
+    right: 10%;
+    top: 85%;
+    right: 20%;
+    transition: transform 0.3s ease;
+}
+
+.ionicon1:hover {
+    fill: #476dc1;
+    transform: scale(1.1);
+}
+
+.ionicon2 {
+    position: absolute;
+    width: 25px;
+    fill: white;
+    right: 10%;
+    top: 85%;
+    right: 17%;
+    transition: transform 0.3s ease;
+}
+
+.ionicon2:hover {
+    fill: #00acee;
+    transform: scale(1.1);
+}
+
+.ionicon3 {
+    position: absolute;
+    width: 25px;
+    fill: white;
+    right: 10%;
+    top: 85%;
+    right: 14%;
+    transition: fill 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.ionicon3:hover {
+    fill: url(#gradiente-hover);
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        max-width: 100%;
+        max-height: 100%;
+        margin-top: 2em;
+        margin-left:50px;
+        background-image: url(images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+}
+
+    main {
+        flex-direction: column;
+    }
+
+    #Logo {
+        margin-left: 15px;
+        margin-top: 0px;
+
+    }
+
+    #example {
+        width: 80%;
+        margin: 0px;
+        margin-left: 20px;
+        margin-top: 30px;
+    }
+
+    #conteudo {
+       flex-direction: column;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding-bottom: 20px;
+       margin-top: 60px;
+    }
+
+    h1 {
+        margin: 0px;
+        margin-right: 80px;
+        width: 100%;
+        text-align: center;
+    }
+
+    p {
+        width: 70%;
+        margin: 0px;
+        margin-right: 80px;
+        text-align: center;
+
+    }
+
+    button {
+        padding: 10px 80px 10px 80px;
+        margin-right: 80px;
+        margin-top: 20px;
+    }
+
+    .ionicon1 {
+        position: relative;
+        width: 25px;
+        fill: white;
+        margin: 0px;
+        margin: 70px 10px 20px 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .ionicon2 {
+        position: relative;
+        width: 25px;
+        fill: white;
+        margin: 0px;
+        margin: -45px -43px 20px 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .ionicon3 {
+        position: relative;
+        width: 25px;
+        fill: white;
+        margin: 0px;
+        margin: -45px -80px 20px 30px;
+        transition: transform 0.3s ease;
+    }
+}
