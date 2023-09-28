@@ -1,7 +1,6 @@
 # Hello World! I'm Rafa, wanna meet me?
 
 <table>
-  <a href="https://github.com/RegulusRK"> <img src="images/tumblr_67618d4666192739e6dac6b768570053_b0b2e6b4_500.gif" width="100" target="_blank"></a>
   <img src="https://img.icons8.com/color/2x/html-5.png" width="120" alt="HTML5">
   <img src="https://img.icons8.com/color/2x/css3.png" width="120" alt="CSS3">
   <img src="https://img.icons8.com/nolan/2x/javascript.png" width="120" alt="JavaScript">
