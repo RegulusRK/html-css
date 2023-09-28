@@ -1,0 +1,35 @@
+name: Update Language Badge
+on:
+  push:
+    branches:
+      - main # Altere para o nome da sua branch principal, se necessário
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install GitHub CLI
+      run: |
+        curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
+        echo "deb [signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list
+        apt update
+        apt install gh
+
+    - name: Get repository language data
+      run: |
+        LANGUAGE_STATS=$(gh api /repos/${{ github.repository }}/languages)
+        echo "::set-output name=language_stats::$LANGUAGE_STATS"
+
+    - name: Update README
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        LANGUAGE_STATS=$(echo ${{ steps.GetLanguageStats.outputs.language_stats }})
+        echo "![Top Languages](https://img.shields.io/github/languages/top/${{ github.repository }}?style=plastic)" > badges.md
+        echo "![Languages](https://img.shields.io/github/languages/count/${{ github.repository }}?style=plastic)" >> badges.md
+        echo "![Languages](https://img.shields.io/github/languages/code-size/${{ github.repository }}?style=plastic)" >> badges.md
+        echo "$LANGUAGE_STATS" | jq -r 'to_entries[] | "![\(.key)](https://img.shields.io/badge/\(.key)-\(.value)%25-green?style=plastic)"' >> badges.md
+        gh repo create-badges --template-path badges.md
