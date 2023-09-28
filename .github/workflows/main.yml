@@ -1,0 +1,35 @@
+name: Update Language Badge
+on:
+  push:
+    branches:
+      - main # Altere para o nome da sua branch principal, se necessário
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Install JavaScript dependencies
+      run: npm install axios
+
+    - name: Get repository language data
+      run: |
+        TOKEN=$(curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}?access_token=${{ secrets.GITHUB_TOKEN }}" | jq -r '.languages_url')
+        LANGUAGES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "$TOKEN")
+        echo "::set-output name=language_data::$LANGUAGES"
+
+    - name: Update README
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        LANGUAGES=$(echo ${{ steps.GetLanguageData.outputs.language_data }})
+        PERCENTAGES=$(echo $LANGUAGES | jq -r 'to_entries | map("\(.key)=\(.value)") | join("&")')
+        curl -X GET "https://img.shields.io/static/v1?label=Languages&message=$PERCENTAGES&color=blue&style=flat-square" > languages.svg
+        mv languages.svg docs/languages.svg
