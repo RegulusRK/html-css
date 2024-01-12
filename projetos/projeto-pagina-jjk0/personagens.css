@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 64px;
+
+    width: 100%;
+    max-width: 1440px;
+    padding-top: 0px;
+}
+
+header img {
+    width: 115px;
+    height: auto;
+   
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+    margin-top: 10px;
+
+    list-style: none;
+}
+
+.navigation_link {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    position: relative;
+}
+
+.navigation_link:hover {
+    color: rgba(173, 0, 0, 0.786);
+}
+
+.navigation_link::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+
+    width: 70%;
+    height: 3px;
+    background: rgba(148, 0, 0, 0.518) ;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
+
+}
+
+.navigation_link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.4s;
+}
+
+#background {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+#background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#background::after {
+    content: '';
+
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+
+    width: 100vw;
+    height: 100vh;
+    max-width: 1440px;
+}
+
+.pp_info {
+    width: 100%;
+    max-width: 570px;
+    display: flex;
+    align-items: center;
+
+}
+
+.pp_info p {
+    min-width: 500px;
+    color: azure;
+    font-size: 20px;
+    margin: 10px 0px 28px ;
+   text-align: justify;
+}
+
+.texto {
+    margin-left: 20px;
+}
+
+h1 {
+    font-size: 80px;
+    color: rgba(148, 0, 0) ;
+}
+.pp {
+   min-height: 400px;
+   margin-left: -100px;
+}

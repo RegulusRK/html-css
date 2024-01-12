@@ -1,0 +1,70 @@
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+
+    width: 100vw;
+    height: 100vh;
+    max-width: 1440px;
+}
+
+.main_info {
+    position: relative;
+    width: 100%;
+    max-width: 570px;
+    margin-left: 90px;
+}
+
+#yuta {
+    position: relative;
+    width: auto;
+    height: 100%;
+    right: -50px;
+}
+
+.main_info p {
+    font-size: 18px;
+    margin: 20px 0px 28px ;
+}
+
+.main_info div {
+    display: flex;
+    column-gap: 32px;
+}
+
+.main_info div a, .main_info div button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 3px;
+
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+
+    transform: skew(-10deg);
+}
+
+.main_info div a {
+    background-color: rgb(141, 12, 12);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.main_info div button {
+    background-color: transparent;
+    border: 1px solid rgb(29, 27, 27) ;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.main_info div button:hover {
+    transform: scale(1.05);
+    background-color:rgba(59, 59, 59, 0.121);
+}
+
+.main_info div a:hover {
+    transform: scale(1.05);
+    background-color: rgb(89, 10, 10)
+}
